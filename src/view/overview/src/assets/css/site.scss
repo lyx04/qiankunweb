@@ -1,0 +1,515 @@
+.overview_title{
+  display: flex;
+  align-items: center;
+  padding: 22px 0 0 22px;
+  .overview-title-img-left{
+    width: 34px;
+    height: 23px;
+  }
+  .overview-title-img-right{
+    width: 156px;
+    height: 8px;
+  }
+  span{
+    margin: 0 10px 0 12px;
+    font-size: 18px;
+  }
+  @media (max-width: 1500px) {
+    span{
+      margin: 0 6px 0 8px;
+      font-size: 14px;
+    }
+    &{
+      padding: 16px 0 0 16px;
+    }
+    .overview-title-img-left{
+      width: 28px;
+      height: 18px;
+    }
+    .overview-title-img-right{
+      width: 100px;
+      height: 5px;
+    }
+  }
+  @media screen and (min-width: 1500px) and (max-width: 1814px) {
+    span{
+      margin: 0 6px 0 8px;
+      font-size: 16px;
+    }
+    &{
+      padding: 16px 0 0 16px;
+    }
+    .overview-title-img-left{
+      width: 28px;
+      height: 18px;
+    }
+    .overview-title-img-right{
+      width: 118px;
+      height: 6px;
+    }
+  }
+}
+
+::v-deep.el-container {
+  margin: 0;
+  padding: 0;
+  .h-container {
+    border: 0;
+    border-radius: 0;
+  }
+}
+::v-deep.main-index {
+  padding: 25px 30px 20px;
+  position: relative;
+  .refresh {
+    position: absolute;
+    top: 4px;
+    right: 24px;
+    font-size: 12px;
+    i {
+      display: inline-block;
+      margin-left: 16px;
+      cursor: pointer;
+    }
+  }
+  .chart_title {
+    margin-bottom: 0;
+  }
+  .main-col {
+    height: 306px;
+    .chart_title {
+      margin-bottom: 0;
+      .org-select {
+        width: 242px;
+        height: 32px;
+        line-height: 32px;
+        display: inline-block;
+        .el-select {
+          width: 100%;
+          .el-input__inner {
+            height: 32px;
+            line-height: 32px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            background-color: transparent;
+          }
+          input{
+            text-align: center;
+          }
+          .el-input__icon {
+            line-height: 32px;
+          }
+        }
+      }
+    }
+    /*基本情况*/
+    .basic-situation {
+      height: 306px;
+      background: url("~@/assets/img/overview/site01.png") no-repeat;
+      background-size: 100% 100%;
+      padding: 20px 34px 0 48px;
+      .basic-situation-content {
+        display: flex;
+        justify-content: space-between;
+        .basic-situation-content-capacity {
+          font-size: 33px;
+          color: #00f6f5;
+          margin-top: 22px;
+          span {
+            font-size: 15px;
+            margin-left: 15px;
+          }
+          p {
+            margin-top: 6px;
+            font-size: 16px;
+            color: #ffffff;
+          }
+          &.color-blue {
+            color: #227cec;
+          }
+          &.color-green {
+            color: #099fd0;
+          }
+          &:first-child{
+            margin-top: 18px;
+          }
+        }
+      }
+      .org-info-content-num {
+        position: relative;
+        width: 159px;
+        height: 158px;
+        margin: auto;
+        .org-info-content-num-img {
+          img {
+            width: 100%;
+            height: 100%;
+            animation: rotate 6s infinite linear;
+          }
+          @keyframes rotate {
+            0% {
+              transform: rotateZ(0deg);
+            }
+            100% {
+              transform: rotateZ(360deg);
+            }
+          }
+        }
+        .org-info-content-num-text {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          text-align: center;
+          height: 47px;
+          margin: auto;
+          font-size: 18px;
+          z-index: 2;
+          div {
+            margin-bottom: 6px;
+            line-height: 1;
+          }
+          span {
+            display: inline-block;
+            line-height: 1;
+            font-size: 24px;
+            color: #00f0ff;
+          }
+          label {
+            display: inline-block;
+            line-height: 1;
+            font-size: 14px;
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+  /*设备构成*/
+  .equipment-composition {
+    height: 306px;
+    background: url("~@/assets/img/overview/site02.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    .equipment-composition-chart{
+      padding: 38px 58px 0 67px;
+    }
+  }
+  /*功率因数*/
+  .power-factor {
+    height: 306px;
+    background: url("~@/assets/img/overview/site03.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    .power-factor-content {
+      padding: 14px 34px 0 42px;
+      ul{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: wrap;
+        li{
+          width: 46%;
+          height: 67px;
+          background: rgba(255, 255, 255, 0.05);
+          text-align: center;
+          margin-top: 33px;
+          padding: 7px 0 6px;
+          position: relative;
+          span{
+            font-size: 16px;
+            color: #FEFEFE;
+            @media (max-width: 1590px) {
+              font-size: 12px;
+            }
+            i{
+              font-size: 12px;
+            }
+          }
+          img {
+            height: 1px;
+            width: 100%;
+            margin: 5px 0;
+          }
+          .alarm-list-content-num{
+            color: #0063FF;
+            font-size: 26px;
+          }
+          &:nth-child(3),&:nth-child(4){
+            .alarm-list-content-num{
+              color: #00F1FF;
+            }
+          }
+          &:nth-child(1),&:nth-child(2){
+            .angle-left-top,.angle-right-top,.angle-left-bottom,.angle-right-bottom {
+              border-color: #0063FF;
+            }
+          }
+          .angle-left-top {
+            top: 0;
+            left: 0;
+          }
+          .angle-right-top {
+            top: 0px;
+            right: 0px;
+          }
+          .angle-left-bottom {
+            bottom: 0px;
+            left: 0px;
+          }
+          .angle-right-bottom {
+            bottom: 0px;
+            right: 0px;
+          }
+        }
+      }
+    }
+  }
+  /* 通讯工况*/
+  .communication {
+    height: 255px;
+    background: url("~@/assets/img/overview/site04.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    .communication-content{
+      display: flex;
+      justify-content: space-between;
+      padding: 24px 32px 0 44px;
+      @media (max-width: 1500px) {
+        padding: 24px 14px 0 22px;
+      }
+    }
+    .proess {
+      display: inline-block;
+      width: 50%;
+      position: relative;
+      .communication-chart {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        & > div {
+          position: absolute !important;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: -4px;
+          margin: auto;
+          .g2-html-annotation {
+            font-size: 27px !important;
+            opacity: 1;
+            background-image: linear-gradient(#55e2fe, #0707ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: none !important;
+          }
+        }
+      }
+    }
+    .proessNum {
+      width: 50%;
+      padding-left: 5%;
+      display: inline-block;
+      height: auto;
+      margin-top: 16px;
+      .item {
+        margin-bottom: 20px;
+        font-size: 0;
+        p {
+          max-width: 80px;
+          margin-right: 10px;
+          display: inline-block;
+          color: #0063ff;
+          q {
+            font-size: 28px;
+          }
+          .num {
+            color: #0063ff;
+            font-size: 14px;
+          }
+          &.active {
+            q {
+              color: #54defe;
+            }
+          }
+        }
+        span {
+          display: inline-block;
+          color: white;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  /*告警统计*/
+  .alarm{
+    height: 306px;
+    background: url("~@/assets/img/overview/site05.png") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 7px;
+    .alarm-content {
+      padding: 0 33px 0 46px;
+      .alarm-content-top {
+        font-size: 16px;
+        color: #ffffff;
+        display: flex;
+        margin: 30px 0 24px;
+        span {
+          margin-left: 30px;
+          &:first-child {
+            margin: 0;
+          }
+        }
+        i {
+          color: #00f6f5;
+        }
+      }
+    }
+  }
+  /*负荷率*/
+  .load{
+    height: 306px;
+    background: url("~@/assets/img/overview/site06.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    margin-top: 7px;
+    .load-content {
+      display: flex;
+      padding: 15px 27px 0 42px;
+      .load-rate-content {
+        width: 132px;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        margin-left: 36px;
+        text-align: center;
+        .load-rate-content-title {
+          font-size: 16px;
+          font-weight: bold;
+          color: #ffffff;
+          margin-top: 21px;
+          i {
+            color: #00f6f5;
+          }
+        }
+        .load-rate-chart {
+          height: 132px;
+        }
+      }
+      .load-day-content {
+        margin-left: 30px;
+        width: calc(100% - 196px);
+        height: 100%;
+      }
+    }
+  }
+  /*电量排行*/
+  .company {
+    padding: 0 16px;
+    margin-top: 30px;
+    li {
+      width: 100%;
+      height: auto;
+      margin-bottom: 13px;
+      border-bottom: 1px dashed #243978;
+      padding-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      font-size: 0;
+      .index {
+        width: 38px;
+        height: 38px;
+        text-align: center;
+        line-height: 38px;
+        color: white;
+        font-size: 18px;
+        background-color: #243978;
+        display: inline-block;
+      }
+      .linear {
+        width: calc(100% - 41px);
+        margin-left: 3px;
+        vertical-align: top;
+        display: inline-block;
+        .linear_title {
+          padding-left: 10px;
+          margin-bottom: 10px;
+          span {
+            display: inline-block;
+            max-width: 60%;
+            color: white;
+            font-size: 14px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            &.num {
+              max-width: 30%;
+              color: #68f1ff;
+              font-size: 12px;
+              float: right;
+            }
+          }
+        }
+        .linear_img {
+          width: 100%;
+          height: 12px;
+          background-color: #18275b;
+          .progress {
+            max-width: 100%;
+            background-image: url("~@/assets/img/overview/linear.png");
+            width: 100%;
+            background-repeat: no-repeat;
+            height: 100%;
+            background-size: 100% 100%;
+            transition: width 3s ease;
+          }
+        }
+      }
+    }
+  }
+  // 电量曲线
+  .electricity{
+    height: 306px;
+    background: url("~@/assets/img/overview/site06.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    margin-top: 7px;
+    .electricity-content {
+      display: flex;
+      padding: 22px 34px 0 37px;
+      .electricity-month-content {
+        width: calc(100% - 242px);
+        height: 100%;
+      }
+      .electricity-constitute-content {
+        width: 200px;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        margin-left: 32px;
+        text-align: center;
+        .electricity-constitute-chart {
+          height: 136px;
+        }
+        .electricity-constitute-content-title {
+          font-size: 16px;
+          font-weight: bold;
+          color: #ffffff;
+          margin-top: 28px;
+        }
+      }
+    }
+  }
+  .main-electricity {
+    height: 671px;
+    background: url("~@/assets/img/overview/site07.png") no-repeat;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    margin-top: 7px;
+  }
+}
